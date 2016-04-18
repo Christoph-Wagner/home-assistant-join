@@ -11,24 +11,26 @@ Installation:
 (`<home-assistant-config>` is usually in `/username/.homeassistant` on Linux)
 - add a notifier to your `configuration.yaml` file
 
-
-    notify:
-      - name: join
-        platform: join
+```yaml
+notify:
+  - name: join
+    platform: join
+```
 
 - You can now use the Join notifier like any other notifier:
 
-
-    automation:
-        - alias: Test ring
-          trigger:
-            platform: state
-            entity_id: input_boolean.activate_join
-            to: 'on'
-          action:
-            service: notify.join
-            data:
-              message: '<join-device-id>$<action>$<data>$<phone-number>'
+```yaml
+automation:
+    - alias: Test ring
+      trigger:
+        platform: state
+        entity_id: input_boolean.activate_join
+        to: 'on'
+      action:
+        service: notify.join
+        data:
+          message: '<join-device-id>$<action>$<data>$<phone-number>'
+```
 
 Message configuration is split by `$`-signs (If you want to use one in your message you are out of luck for now):
 
