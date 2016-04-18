@@ -44,5 +44,8 @@ Message configuration is split by `$`-signs (If you want to use one in your mess
 - **\<data>** (*Optional* for 'ring', *Required* for all others): The data (text, url) for the command
 - **\<phone-number>** (*Optional* for all but 'sms'): The number to send the SMS to
 
-Disclaimer: The code could probably be much, much better.
+**Disclaimer:** The code could probably be much, much better.
 But I don't really know Python and I haven't yet done much with Home Assistant.
+
+This project is not an official Join by joaoapps product I do not own
+any copyright or trademark regarding Join.
