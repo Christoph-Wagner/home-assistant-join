@@ -57,7 +57,6 @@ class JoinNotificationService(BaseNotificationService):
             urls.append(self.devices.get(device))
 
         urls = JoinUrls(urls[0]) # TODO allow multiple targets
-        logger.warn(urls)
         if action == 'ring':
             execute(urls.ring())
         else:
